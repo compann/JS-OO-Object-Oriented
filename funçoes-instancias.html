@@ -1,0 +1,55 @@
+<html>
+    <body>
+        <script>
+            //'this' se cria objetos dentro de funções.
+           function Pessoa(){
+            this.nome = "Guilherme";
+            this.idade = 27;
+            this.printNome = function(numero){
+                alert(numero);
+            };
+            this.returnAnimal = function(animal){
+                return animal;
+            }
+           }
+
+           function Animal() {
+                this.nome = "cachorro";
+                this.raca  = "salsicha";
+           }
+
+            var pessoa = new Pessoa ();
+            var animal = new Animal ();
+            
+            alert(pessoa.returnAnimal(animal).raca );
+    
+        
+
+           function Animal(nome,peso){
+            if (nome == undefined){
+                nome = "cachorro";
+            }
+
+            if (peso == undefined){
+                peso = '5kg';
+            }
+
+            this.nome = nome;
+            this.peso = peso;
+
+           }
+
+           animal1 = new Animal("cachorro", "'12kg");
+
+           animal2 = new Animal("gato", "6kg" );
+
+
+
+
+           alert(animal1.nome);
+
+           alert(animal2.peso);
+        
+        </script>
+    </body>
+</html>
